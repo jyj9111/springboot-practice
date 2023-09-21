@@ -1,0 +1,12 @@
+spring:
+  mvc:
+    static-path-pattern: /static/**
+#    spring 이 정적 파일 요청을 받을 때 그 파일을 찾는 경로들
+  web:
+    resources:
+      static-locations: file:media/, classpath:/static
+
+  servlet:
+      multipart:
+        max-file-size: 10MB
+        max-request-size: 10MB

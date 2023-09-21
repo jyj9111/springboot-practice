@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lotto</title>
+</head>
+<body>
+<div>
+  <sp th:each="lottoNum: ${lottoList}">[[${lottoNum}]] - </sp>
+</div>
+<div>
+  <a href="http://localhost:8080/hits">뒤로가기</a>
+  <a href="http://localhost:8080/lotto">다시하기</a>
+</div>
+
+</body>
+</html>

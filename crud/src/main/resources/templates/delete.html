@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+<!-- 삭제할 학생의 이름 표시 해주기 -->
+  <h1>Delete [[${student.name}]]?</h1>
+<!-- update.html 참고로 추가 -->
+<!-------------------- 수정 부분 ------------------------------------->
+  <form th:action="@{/{id}/delete (id=${student.id})}" method="post">
+<!------------------------------------------------------------------->
+<!--    create/ update 와는 다르게  -->
+<!--    delete는 추가적인 데이터를 필요로 하지 않는다.  -->
+<!--    그래서 추가적인 input 요소 없이 input type="sumbit" 만 만들면 된다. -->
+    <input type="submit" value="Delete">
+  </form>
+  <a th:href="@{/{id} (id=${student.id})}">Back</a>
+</body>
+</html>
